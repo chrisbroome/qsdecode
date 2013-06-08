@@ -1,0 +1,2 @@
+# qsdecode
+### JavaScript querystring decoder
