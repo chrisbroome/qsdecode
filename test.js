@@ -1,5 +1,5 @@
-var qsdecode = require('./qsdecode');
+import {qsdecode} from './qsdecode.js';
 
-var queryString = "x=y&2=4&asdf=hijklmnop&qrstuv=wxyz"
+const queryString = "x=y&2=4&asdf=hijklmnop&qrstuv=wxyz"
 
 console.log(JSON.stringify(qsdecode(queryString)));

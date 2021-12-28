@@ -1,18 +1,16 @@
-var _ = require('underscore');
+import {reduce} from 'lodash'
 
-function qsdecode(qs) {
-  var s = qs.split('&');
-  var o = {};
-  var r = _(redux).bind(o);
-  _(s).each(r);
-  return o;
+const redux = (a, x) => {
+  const kvp = x.split('=');
+  const k = kvp[0];
+  const v = decodeURIComponent(kvp[1]);
+  return {
+    ...a,
+    [k]: decodeURIComponent(v),
+  }
 }
 
-function redux(x) {
-  var kvp = x.split('=');
-  var k = kvp[0];
-  var v = decodeURIComponent(kvp[1]);
-  this[k] = decodeURIComponent(v);
+export const qsdecode = (qs) => {
+  const s = qs.split('&');
+  return reduce(s, redux, {});
 }
-
-module.exports = qsdecode;

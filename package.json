@@ -3,15 +3,12 @@
   "description": "",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "main": "index.js",
   "dependencies": {
-    "underscore": "1.4.4"
+    "lodash": "^4.17.21"
   },
-  "devDependencies": {
-    "jasmine-node": "1.8.0"
-  },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": "git://github.com/chrisbroome/qsdecode",
   "author": "Christopher Broome <ChrisBroome7@gmail.com>",
   "license": "MIT"
